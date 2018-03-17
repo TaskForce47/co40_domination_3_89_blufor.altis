@@ -21,7 +21,11 @@ def createmapvariants():
             # pathlib.Path().mkdir(parents=True, exist_ok=True)
             shutil.copytree('../', dest,
                             ignore=shutil.ignore_patterns('.tf47Tools', '.tf47MapVariants', '.git', '.DS_Store',
-                                                          '.gitignore', 'ma3a'))
+                                                          '.gitignore', 'ma3a', '.tf47Attachments', '.travis.yml')
+                            
+                            )
+
+
             root_src_dir = os.path.join(os.path.abspath(path), island)
             root_dst_dir = dest
             for src_dir, dirs, files in os.walk(root_src_dir):
