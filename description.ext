@@ -10,8 +10,8 @@ allowFunctionsLog = 1;
 #endif
 #include "cfgfunctions.hpp"
 
-author = "Xeno";
-OnLoadName = "Domination!";
+author = "Xeno modified by TF Dagger";
+OnLoadName = "{NAME_TPL}";
 onLoadMission = __D_VER_NAME__;
 onLoadIntroTime = false;
 onLoadMissionTime = false;

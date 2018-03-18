@@ -144,8 +144,8 @@ class ScenarioData {
 };
 class Mission {
     class Intel {
-        briefingName = "co40 Domination! Blufor [3.89]";
-        overviewText = "Kill more enemies, buy better weapons";
+        briefingName = "{NAME_TPL}";
+        overviewText = "by Xeno modified by TF Dagger";
         resistanceWest = 0;
         startWeather = 0;
         startWind = 0.1;

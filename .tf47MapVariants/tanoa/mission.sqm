@@ -129,7 +129,8 @@ class CustomAttributes {
 };
 class Mission {
     class Intel {
-        briefingName = "co40 Domination! Blufor [3.89]";
+        briefingName = "{NAME_TPL}";
+        overviewText = "by Xeno modified by TF Dagger";
         timeOfChanges = 1800;
         startWeather = 0;
         startWind = 0.1;
@@ -2910,7 +2911,7 @@ class Mission {
                 angles[] = {0.192265, 0, 5.9471};
             };
             name = "d_target_20";
-            init = "this setVariable [""d_cityname"", ""Ouméré""]";
+            init = "this setVariable [""d_cityname"", ""Oumere""]";
             id = 309;
             type = "LocationCityCapital_F";
             atlOffset = 1.90735e-06;
