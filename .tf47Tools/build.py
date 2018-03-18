@@ -10,6 +10,9 @@ with open(".tf47Config.yml", 'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 platform = sys.platform
 
+label = sp.check_output(["git", "describe", "--tags"]).decode('ascii').strip().split("-")[0]
+label = '{}-beta.{}'.format(label, os.environ["TRAVIS_BUILD_NUMBER"])
+
 
 def createmapvariants():
     path = '../.tf47MapVariants'
@@ -17,15 +20,13 @@ def createmapvariants():
     for island in files:
         if os.path.isdir(
                 os.path.join(os.path.abspath(path), island)):  # check whether the current object is a folder or not
-            dest = "builds/{}.{}".format(cfg['Info']['project'], island)
+            dest = "builds/{}-{}.{}".format(cfg['Info']['project'], label, island)
             # pathlib.Path().mkdir(parents=True, exist_ok=True)
             shutil.copytree('../', dest,
                             ignore=shutil.ignore_patterns('.tf47Tools', '.tf47MapVariants', '.git', '.DS_Store',
                                                           '.gitignore', 'ma3a', '.tf47Attachments', '.travis.yml')
-                            
+
                             )
-
-
             root_src_dir = os.path.join(os.path.abspath(path), island)
             root_dst_dir = dest
             for src_dir, dirs, files in os.walk(root_src_dir):
@@ -38,6 +39,32 @@ def createmapvariants():
                     if os.path.exists(dst_file):
                         os.remove(dst_file)
                     shutil.copy(src_file, dst_dir)
+
+
+def replaceTemplates():
+    path = 'builds'
+    files = ['mission.sqm', 'description.ext', 'x_client/x_intro.sqf']
+    cfg['Templates']['VERSION'] = label;
+    for island in os.listdir(path):
+        if os.path.isdir(os.path.join(os.path.abspath(path), island)):
+            cfg['Templates']['ISLAND'] = os.path.splitext(island)[1].strip('.').upper()
+            for file in files:
+                for template in cfg['Templates']:
+                    filePath= "{}/{}/{}".format(path,island, file)
+                    inplace_change(filePath, template, cfg['Templates'][template])
+
+
+def inplace_change(filename, old_string, new_string):
+    with open(filename) as f:
+        s = f.read()
+        old_string = "{"+old_string+"}"
+        if old_string not in s:
+            print("\"{old_string}\" not found in {filename}.".format(**locals()))
+            return
+
+    with open(filename, 'w') as f:
+        s = s.replace(old_string, new_string)
+        f.write(s)
 
 
 def createpbos():
@@ -85,6 +112,16 @@ def main():
         exit(1)
     else:
         print("created map variants")
+
+    print("\nUpdating Template Variables")
+    try:
+        replaceTemplates()
+    except:
+        print("could not update template variables")
+        print(traceback.format_exc())
+        exit(1)
+    else:
+        print("updated template variables")
 
     print("\nCreating pbos")
     try:
