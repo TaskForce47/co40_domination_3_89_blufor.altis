@@ -16,9 +16,9 @@ setViewDistance d_InitialViewDistance;
 setObjectViewDistance (d_InitialViewDistance + 100);
 
 d_target_names = [];
-{	
+{
 	private _dtar = _x;
-	
+
 	private _ar = [];
 	_ar resize 3;
 	private _name = _dtar getVariable "d_cityname";
@@ -141,7 +141,7 @@ if (hasInterface) then {
 	{
 		d_player_ammobox_pos pushBack [markerPos _x, markerDir _x];
 		false
-	} count (allMapMarkers select {_x select [0, 20] == "d_player_ammobox_pos"});	
+	} count (allMapMarkers select {_x select [0, 20] == "d_player_ammobox_pos"});
 #else
 	d_player_ammobox_pos = [
 		[markerPos "d_player_ammobox_pos", markerDir "d_player_ammobox_pos", west],
@@ -282,7 +282,7 @@ if (isNil "d_winterw") then {
 
 if (isServer) then {
 	execVM "x_bikb\kbinit.sqf";
-	
+
 	call compile preprocessFileLineNumbers "x_shc\x_shcinit.sqf";
 
 #ifndef __TT__
@@ -293,7 +293,7 @@ if (isServer) then {
 
 		private _mmm = markerPos "d_base_sb_ammoload";
 		__TRACE_1("","_mmm")
-		
+
 		if !(_mmm isEqualTo [0,0,0]) then {
 			private _stype = [d_servicepoint_building] call BIS_fnc_simpleObjectData;
 			_mmm set [2, 3.3];
@@ -303,7 +303,7 @@ if (isServer) then {
 		};
 
 		if (d_base_aa_vec == "") exitWith {};
-		
+
 		if (isNil "d_HC_CLIENT_OBJ_OWNER") then {
 			[d_own_side, d_base_aa_vec] call d_fnc_cgraa;
 		} else {
@@ -311,7 +311,7 @@ if (isServer) then {
 		};
 	};
 #endif
-	
+
 	if (d_weather == 0) then {execFSM "fsms\fn_WeatherServer.fsm"};
 
 	if (d_MainTargets_num < 200) then {
@@ -362,14 +362,14 @@ if (isServer) then {
 		d_MainTargets = count d_maintargets_list;
 	};
 	publicVariable "d_MainTargets";
-	
+
 	// create random list of side missions
 	d_side_missions_random = d_sm_array call d_fnc_RandomArray;
 	__TRACE_1("","d_side_missions_random")
-	
+
 	d_current_mission_counter = 0;
 
-#ifndef __TT__
+/* #ifndef __TT__
 	// editor varname, unique number, true = respawn only when the chopper is completely destroyed, false = respawn after some time when no crew is in the chopper or chopper is destroyed
 	// unique number must be between 3000 and 3999
 	if (!d_ifa3lite) then {
@@ -392,7 +392,7 @@ if (isServer) then {
 #else
 	[[d_chopper_1,3001,true],[d_chopper_2,3002,true],[d_chopper_3,3003,false,1500],[d_chopper_4,3004,false,1500],[d_chopper_5,3005,false,600],[d_chopper_6,3006,false,600],
 	[d_choppero_1,4001,true],[d_choppero_2,4002,true],[d_choppero_3,4003,false,1500],[d_choppero_4,4004,false,1500],[d_choppero_5,4005,false,600],[d_choppero_6,4006,false,600]] call compile preprocessFileLineNumbers "x_server\x_inithelirespawn2.sqf";
-	
+
 	[
 		[d_vec_mhq_1,0,localize "STR_DOM_MISSIONSTRING_12"],[d_vec_mhq_2,1,localize "STR_DOM_MISSIONSTRING_13"],[d_vec_med_1,100],[d_vec_rep_1,200],[d_vec_fuel_1,201],[d_vec_ammo_1,202], [d_vec_rep_2,203],
 		[d_vec_fuel_2,204], [d_vec_ammo_2,205], [d_vec_eng_1,300], [d_vec_eng_2,301], [d_vec_trans_1,400], [d_vec_trans_2,401],
@@ -400,15 +400,15 @@ if (isServer) then {
 		[d_vec_fuelo_2,1204], [d_vec_ammoo_2,1205], [d_vec_engo_1,1300], [d_vec_engo_2,1301], [d_vec_transo_1,1400], [d_vec_transo_2,1401]
 	] call compile preprocessFileLineNumbers "x_server\x_initvrespawn2.sqf";
 #endif
-	[d_wreck_rep,localize "STR_DOM_MISSIONSTRING_0",d_heli_wreck_lift_types] execFSM "fsms\fn_RepWreck.fsm";
+	[d_wreck_rep,localize "STR_DOM_MISSIONSTRING_0",d_heli_wreck_lift_types] execFSM "fsms\fn_RepWreck.fsm"; */
 #ifdef __TT__
-	[d_wreck_rep2, localize "STR_DOM_MISSIONSTRING_0", d_heli_wreck_lift_types] execFSM "fsms\fn_RepWreck.fsm";
+	/* [d_wreck_rep2, localize "STR_DOM_MISSIONSTRING_0", d_heli_wreck_lift_types] execFSM "fsms\fn_RepWreck.fsm"; */
 	d_public_points = true;
 #endif
 
 	call compile preprocessFileLineNumbers "x_server\x_setupserver.sqf";
 	if (d_MissionType != 2) then {0 spawn d_fnc_createnexttarget};
-	
+
 #ifdef __TT__
 	d_points_blufor = 0;
 	d_points_opfor = 0;
@@ -417,11 +417,11 @@ if (isServer) then {
 	d_points_array = [0,0,0,0];
 	publicVariable "d_points_array";
 #endif
-	
+
 	addMissionEventHandler ["PlayerDisconnected", {_this call d_fnc_playerdisconnected}];
-	
+
 	addMissionEventHandler ["HandleDisconnect", {_this call d_fnc_handledisconnect}];
-	
+
 	addMissionEventhandler ["BuildingChanged", {_this call d_fnc_buildingchanged}];
 };
 
@@ -448,7 +448,7 @@ if (hasInterface) then {
 	["d_vec_service", d_vecre_trigger,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_4",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_Ammobox_Reload", d_AMMOLOAD,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_5",0,"hd_dot"] call d_fnc_CreateMarkerLocal;
 	["d_teleporter", d_WFLAG_BASE,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_6",0,"mil_flag"] call d_fnc_CreateMarkerLocal;
-	
+
 	["d_wreck_serviceR", d_wreck_rep2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_0",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_aircraft_serviceR", d_jet_trigger2,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_2",0,"n_service"] call d_fnc_CreateMarkerLocal;
 	["d_chopper_serviceR", d_chopper_triggerR,"ICON","ColorYellow",[1,1],localize "STR_DOM_MISSIONSTRING_3",0,"n_service"] call d_fnc_CreateMarkerLocal;
