@@ -44,14 +44,16 @@ def createmapvariants():
 def replaceTemplates():
     path = 'builds'
     files = ['mission.sqm', 'description.ext', 'x_client/x_intro.sqf']
-    cfg['Templates']['VERSION'] = label;
     for island in os.listdir(path):
         if os.path.isdir(os.path.join(os.path.abspath(path), island)):
-            cfg['Templates']['ISLAND'] = os.path.splitext(island)[1].strip('.').upper()
+            curIsland =os.path.splitext(island)[1].strip('.').upper()
             for file in files:
                 for template in cfg['Templates']:
                     filePath= "{}/{}/{}".format(path,island, file)
                     inplace_change(filePath, template, cfg['Templates'][template])
+                inplace_change(filePath, "VERSION", label)
+                inplace_change(filePath, "ISLAND", curIsland)
+
 
 
 def inplace_change(filename, old_string, new_string):

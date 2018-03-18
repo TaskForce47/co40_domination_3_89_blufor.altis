@@ -10,11 +10,10 @@ before_install:
     pip install github3.py;
     pip install PyYAML;
     docker pull acemod/armake;
-    docker run -v `pwd`:/data/ acemod/armake  /bin/bash -c "cd /data/.tf47Tools; pip install PyYAML; python3 build.py";
+    docker run -e TRAVIS_BUILD_NUMBER  -v `pwd`:/data/ acemod/armake /bin/bash -c "cd /data/.tf47Tools; pip install PyYAML; python3 build.py";
   fi
 script:
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
-    git fetch -t;    
+    git fetch -t;
     python3 .tf47Tools/deploy.py;
   fi
-
