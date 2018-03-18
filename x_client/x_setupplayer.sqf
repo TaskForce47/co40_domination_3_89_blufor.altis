@@ -293,7 +293,7 @@ player setVariable ["d_isinaction", false];
 0 spawn {
 	waitUntil {sleep 0.3;!d_still_in_intro};
 	d_d3d_locs4a = localize "STR_DOM_MISSIONSTRING_1718";
-#ifndef __TT__
+/* #ifndef __TT__
 	d_3draw_ar = [
 		[d_FLAG_BASE, localize "STR_DOM_MISSIONSTRING_1644", 2.5],
 		[d_vecre_trigger, localize "STR_DOM_MISSIONSTRING_524", 5],
@@ -321,7 +321,7 @@ player setVariable ["d_isinaction", false];
 		[[d_wreck_rep2, d_wreck_rep] select (d_player_side == blufor), localize "STR_DOM_MISSIONSTRING_0", 5],
 		[[d_AMMOLOAD2, d_AMMOLOAD] select (d_player_side == blufor), localize "STR_DOM_MISSIONSTRING_531", 5]
 	];
-#endif
+#endif */
 	addMissionEventHandler ["Draw3D", {call d_fnc_draw3dstuff}];
 
 	"d_fpsresource" cutRsc ["d_fpsresource", "PLAIN"];
