@@ -1,5 +1,7 @@
 #define addc(cname) class cname {headerType = -1;}
 class cfgFunctions {
+	#include "TF47CoreScripts\CfgFunctions.hpp"
+	#include "TF47Modules\CfgFunctions.hpp"
 	version = 3.0;
 	createShortcuts = 1;
 	class Dom {

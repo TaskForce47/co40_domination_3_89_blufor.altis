@@ -16,8 +16,8 @@ onLoadMission = __D_VER_NAME__;
 onLoadIntroTime = false;
 onLoadMissionTime = false;
 disabledAI = 1;
-respawn = "BASE";
-respawndelay = 20;
+respawn = 3;
+respawndelay = 30;
 debriefing = 1;
 showGPS = 1;
 showSquadRadar = 1;
@@ -25,51 +25,18 @@ saving = 0;
 loadScreen = "pics\domls.paa";
 overviewText = "Seize various main targets and resolve side missions...";
 
-#ifdef __DEBUG__
-enableDebugConsole = 2;
-#endif
-
+enableDebugConsole = 1;
 class Header {
-#ifndef __TT__
-	gameType = COOP;
-#else
-	gameType = CTI;
-#endif
-	minPlayers = 1;
-#ifdef __ALTIS__
-	maxPlayers = 46;
-#endif
-#ifdef __CUP_CHERNARUS__
-	maxPlayers = 41;
-#endif
-#ifdef __CUP_TAKISTAN__
-	maxPlayers = 41;
-#endif
-#ifdef __CUP_SARA__
-	maxPlayers = 41;
-#endif
-#ifdef __IFA3LITE__
-	maxPlayers = 41;
-#endif
-#ifdef __TANOA__
-	maxPlayers = 46;
-#endif
-#ifdef __TT__
-	maxPlayers = 56;
-#endif
-#ifdef __STRATIS__
-	maxPlayers = 46;
-#endif
-#ifdef __MALDEN__
-	maxPlayers = 41;
-#endif
+		gameType = Coop;
+		minPlayers = 1;
+		maxPlayers = 64;
 };
 
-joinUnassigned = false; // auto assign
+joinUnassigned = 0; // auto assign
 
 // 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System
 // {channelid, disablechat, disablevoice}
-disableChannels[] = {{0,false,true},{1,false,true},{6,true,true}};
+disableChannels[]={0,1,2,6}; 						//0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System
 enableItemsDropping = 0;
 
 //(0 - default, options based; 1 forced on; 2 forced off)
@@ -81,15 +48,46 @@ forceRotorLibSimulation = 2;
 3 = All_But_Respawned - All units are managed by the manager with exception of respawned (opposite to mode 2)
 Default value: 0 for SP, 2 for MP*/
 corpseManagerMode = 1;
-corpseLimit = 5;
-corpseRemovalMinTime = 60;
-corpseRemovalMaxTime = 120;
+corpseLimit = 30;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 600;
 
 wreckManagerMode = 0;
-wreckLimit = 3;
-wreckRemovalMinTime = 120;
-wreckRemovalMaxTime = 360;
+wreckLimit = 10;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 600;
+class ACE_Settings {
+	class ace_cookoff_enable {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+  };
+	class ace_cookoff_enableAmmobox {
+    value = 0;
+    typeName = "BOOL";
+    force = 1;
+  };
+};
+class CfgDebriefing
+{
+    #include "TF47CoreScripts\CfgDebriefing.hpp"
 
+    class winCache
+    {
+        title = "Mission abgeschlossen";
+		subtitle = "";
+		description = "Es wurden alle Caches erfolgreich zerstört!";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+    }
+};
+class CfgNotifications
+{
+    #include "TF47CoreScripts\CfgNotifications.hpp"
+    #include "TF47Modules\CfgNotifications.hpp"
+};
+#include "TF47Modules\CfgDialogs.hpp"
 // uncomment the following to delete corpses and wrecks only if players are at least 30m away; default is 0, means no nearby player check is done by the engine
 // minPlayerDistance = 30;
 

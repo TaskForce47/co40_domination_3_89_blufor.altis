@@ -1,0 +1,1 @@
+_this call tf47_core_ticketsystem_fnc_onPlayerRespawn;
