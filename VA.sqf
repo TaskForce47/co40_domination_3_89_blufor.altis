@@ -7,15 +7,7 @@
 #define ENEMY_SIDE 5
 #define FRIENDLY_SIDE 6
 #define LOGIC_SIDE 7
- 
-_box = switch (worldName) do {
-    case "Malden": { [arsenal1, arsenal2, arsenal3] };
-    case "Takistan": { [arsenal1, arsenal2, arsenal3, arsenal4] };
-    case "Chernarus": { [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5] };
-    case "Zargabad": { [arsenal1, arsenal2] };
-    default { [] };
-};
- 
+
 //if (isServer) then {
 {
 // Grab the parameter that was passed in.
@@ -23,9 +15,9 @@ _box = switch (worldName) do {
 //_box = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _box = _x;
 // Check if @XLA_FixedArsenal is loaded
- 
+
 [_box, [
- 
+
     //PISTOLS
     "rhsusf_weap_glock17g4",
     "rhsusf_weap_m1911a1",
@@ -401,7 +393,7 @@ _box = _x;
 ], false, true] call xla_fnc_addVirtualMagazineCargo;
 
 [_box, [
- 
+
     //BACKPACKS
     "rhsusf_assault_eagleaiii_coy",
     "rhsusf_assault_eagleaiii_ocp",
@@ -458,7 +450,7 @@ _box = _x;
 
     "tf_rt1523g_big_rhs",
     "tf_rt1523g_rhs",
-	
+
 	"milgp_bp_Breacher_cb",
 	"milgp_bp_Breacher_mc",
 	"milgp_bp_Breacher_rgr",
@@ -736,7 +728,7 @@ _box = _x;
     "BWA3_Uniform_Ghillie_idz_Tropen",
     "BWA3_Uniform_Crew_Tropen",
     "BWA3_Uniform_Helipilot",
-	
+
 	"milgp_u_fleece_grey_g3_field_pants_aor1",
 	"milgp_u_fleece_grey_g3_field_pants_aor2",
 	"milgp_u_fleece_grey_g3_field_pants_M81",
@@ -764,7 +756,7 @@ _box = _x;
     "U_B_FullGhillie_lsh",
     "U_B_FullGhillie_sard",
     "U_B_FullGhillie_ard",
-     
+
     //VESTS
     "rhsusf_mbav",
     "rhsusf_mbav_grenadier",
@@ -825,7 +817,7 @@ _box = _x;
     "BWA3_Vest_JPC_Radioman_Tropen",
     "BWA3_Vest_JPC_Leader_Tropen",
     "BWA3_Vest_JPC_Rifleman_Tropen",
-	
+
 	"milgp_v_jpc_assaulter_belt_cb",
 	"milgp_v_jpc_assaulter_belt_mc",
 	"milgp_v_jpc_assaulter_belt_rgr",
@@ -912,7 +904,7 @@ _box = _x;
     "BWA3_G_Combat_Orange",
     "BWA3_G_Combat_Black",
 
-    //NVGs 
+    //NVGs
     "rhsusf_ANPVS_14",
     "rhsusf_ANPVS_15",
     "rhsusf_Rhino",
@@ -937,7 +929,7 @@ _box = _x;
     "Binocular",
     "Rangefinder",
     "Laserdesignator",
-     
+
     //MAP
     "ItemMap",
 
@@ -1141,4 +1133,4 @@ _box = _x;
 _addActionText = "<t color=""#11F22F"">" + "Arsenal";
 ["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
-} forEach _box; //[arsenal1, arsenal2, arsenal3]; //, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
+} forEach [arsenal1, arsenal2, arsenal3, arsenal4]; //[arsenal1, arsenal2, arsenal3]; //, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
