@@ -821,7 +821,7 @@ if (!d_tt_tanoa) then {
 #include "d_sm_classes_CUP.sqf"
 #endif
 #ifdef __CUP_TAKISTAN__
-#include "d_sm_classes_CUP.sqf"
+#include "d_sm_classes_rhs.sqf"
 #endif
 #ifdef __CUP_SARA__
 #include "d_sm_classes_CUP.sqf"

@@ -1,13 +1,11 @@
-["Indep","IND_F","Infantry","HAF_InfSquad"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfSquad"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfSquad"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfSquad_Weapons"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfTeam"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfTeam_AT"] call d_fnc_GetConfigGroup,
-["Indep","IND_F","Infantry","HAF_InfTeam_AA"] call d_fnc_GetConfigGroup
-#ifdef __TANOATT__
-,["Indep","IND_C_F","Infantry","BanditCombatGroup"] call d_fnc_GetConfigGroup,
-["Indep","IND_C_F","Infantry","BanditFireTeam"] call d_fnc_GetConfigGroup,
-["Indep","IND_C_F","Infantry","ParaCombatGroup"] call d_fnc_GetConfigGroup,
-["Indep","IND_C_F","Infantry","ParaShockTeam"] call d_fnc_GetConfigGroup
-#endif
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_MANEUVER"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_chq"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_fireteam"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_AA"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_AT"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_marksman"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_mg"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_2mg"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_mg_sniper"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_sniper"] call d_fnc_GetConfigGroup

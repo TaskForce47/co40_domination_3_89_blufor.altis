@@ -1,5 +1,11 @@
-["East","CUP_O_SLA","Infantry","CUP_O_SLA_InfantrySquad"] call d_fnc_GetConfigGroup,
-["East","CUP_O_SLA","Infantry","CUP_O_SLA_InfantrySection"] call d_fnc_GetConfigGroup,
-["East","CUP_O_SLA","Infantry","CUP_O_SLA_InfantrySectionAT"] call d_fnc_GetConfigGroup,
-["East","CUP_O_SLA","Infantry","CUP_O_SLA_InfantrySectionMG"] call d_fnc_GetConfigGroup,
-["East","CUP_O_SLA","Infantry","CUP_O_SLA_InfantrySectionAA"] call d_fnc_GetConfigGroup
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_MANEUVER"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_chq"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_fireteam"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_AA"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_AT"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_marksman"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_section_mg"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_2mg"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_mg_sniper"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_msv ","rhs_group_rus_msv_infantry","rhs_group_rus_msv_infantry_squad_sniper"] call d_fnc_GetConfigGroup

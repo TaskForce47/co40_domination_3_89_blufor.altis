@@ -1,2 +1,2 @@
-["East","CUP_O_TK","Infantry","CUP_O_TK_SpecialPurposeSquad"] call d_fnc_GetConfigGroup,
-["East","CUP_O_TK_MILITIA","Infantry","CUP_O_TK_MILITIA_Demosquad"] call d_fnc_GetConfigGroup
+["East","rhs_faction_vmf","rhs_group_rus_vmf_infantry_recon","rhs_group_rus_vmf_infantry_recon_fireteam"] call d_fnc_GetConfigGroup,
+["East","rhs_faction_vmf","rhs_group_rus_vmf_infantry_recon","rhs_group_rus_vmf_infantry_recon_squad"] call d_fnc_GetConfigGroup
