@@ -881,147 +881,147 @@ if (!d_tt_tanoa) then {
 	// type of enemy plane that will fly over the main target
 #ifndef __CUP__
 	d_airai_attack_plane = switch (d_enemy_side_short) do {
-		case "E": {["O_Plane_CAS_02_F"]};
+		case "E": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 		case "W": {[["LIB_FW190F8", "LIB_FW190F8_4", "LIB_FW190F8_2", "LIB_FW190F8_5", "LIB_FW190F8_3"], ["B_Plane_CAS_01_F"]] select (!d_ifa3lite)};
-		case "G": {["I_Plane_Fighter_03_CAS_F"]};
+		case "G": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 	};
 #else
 	d_airai_attack_plane = switch (d_enemy_side_short) do {
-		case "E": {["O_Plane_CAS_02_F","CUP_O_Su25_RU_3","CUP_O_Su25_RU_1","CUP_O_Su25_RU_2"]};
+		case "E": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 		case "W": {["B_Plane_CAS_01_F"]};
-		case "G": {["I_Plane_Fighter_03_CAS_F"]};
+		case "G": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 	};
 #endif
 
 #ifdef __RHS__
 	d_airai_attack_plane = switch (d_enemy_side_short) do {
-		case "E": {["O_Plane_CAS_02_F","CUP_O_Su25_RU_3","CUP_O_Su25_RU_1","CUP_O_Su25_RU_2"]};
+		case "E": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 		case "W": {["RHS_A10","rhsusf_f22"]};
-		case "G": {["I_Plane_Fighter_03_CAS_F"]};
+		case "G": {["rhs_mig29sm_vvs","RHS_Su25SM_vvs","rhs_mig29s_vvs","RHS_T50_vvs_generic"]};
 	};
 #endif
 
 #ifndef __CUP__
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_F"]};
+		case "E": {["RHS_Mi24V_vvs"]};
 		case "W": {[["LIB_Ju87_Italy2", "LIB_Ju87_Italy", "LIB_Ju87"], ["B_Heli_Attack_01_F"]] select (!d_ifa3lite)};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi24V_vvs"]};
 	};
 #else
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_F","CUP_O_Mi24_P_RU","CUP_O_Mi24_V_RU","CUP_O_Ka50_SLA"]};
+		case "E": {["RHS_Mi24V_vvs"]};
 		case "W": {["B_Heli_Attack_01_F"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi24V_vvs"]};
 	};
 #endif
 
 #ifdef __RHS__
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_F"]};
+		case "E": {["RHS_Mi24V_vvs"]};
 		case "W": {["RHS_AH64D", "RHS_AH64DGrey","RHS_AH64D_wd","RHS_AH1Z","RHS_AH1Z_wd"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi24V_vvs"]};
 	};
 #endif
 
 #ifdef __ALTIS__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __TANOA__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __STRATIS__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __MALDEN__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __IFA3LITE__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["LIB_RBAF_Ju87"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __TT__
 	// enemy parachute troops transport chopper
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_T_VTOL_02_infantry_grey_F"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_T_VTOL_01_infantry_blue_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __CUP_CHERNARUS__
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_MI6T_RU"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_Heli_Light_01_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __CUP_SARA__
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_Mi8_SLA_1"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_Heli_Light_01_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __CUP_TAKISTAN__
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_AN2_TK"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["B_Heli_Light_01_F"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 #ifdef __RHS__
 	d_transport_chopper = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_AN2_TK"]};
+		case "E": {["RHS_Mi8AMT_vvs"]};
 		case "W": {["rhsusf_CH53E_USMC"]};
-		case "G": {["I_Heli_Transport_02_F"]};
+		case "G": {["RHS_Mi8AMT_vvs"]};
 	};
 #endif
 
 #ifndef __CUP__
 	// light attack chopper (for example I_Heli_light_03_F with MG)
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_black_F"]};
+		case "E": {["RHS_Mi8mt_vvs"]};
 		case "W": {[["LIB_Ju87_Italy2"], ["B_Heli_Light_01_armed_F"]] select (!d_ifa3lite)};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi8mt_vvs"]};
 	};
 #else
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_black_F", "CUP_O_Mi8_RU"]};
+		case "E": {["RHS_Mi8mt_vvs"]};
 		case "W": {["B_Heli_Light_01_F"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi8mt_vvs"]};
 	};
 #endif
 #ifdef __RHS__
 	d_light_attack_chopper = switch (d_enemy_side_short) do {
-		case "E": {["O_Heli_Attack_02_black_F"]};
+		case "E": {["RHS_Mi8mt_vvs"]};
 		case "W": {["RHS_MELB_AH6M","RHS_UH1Y_d","RHS_UH1Y"]};
-		case "G": {["I_Heli_light_03_F"]};
+		case "G": {["RHS_Mi8mt_vvs"]};
 	};
 #endif
 
