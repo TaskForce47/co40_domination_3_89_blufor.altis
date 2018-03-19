@@ -76,7 +76,7 @@ class CfgDebriefing
     {
         title = "Mission abgeschlossen";
 		subtitle = "";
-		description = "Es wurden alle Caches erfolgreich zerstört!";
+		description = "Es wurden alle Caches erfolgreich zerstoert!";
 		pictureBackground = "";
 		picture = "b_inf";
 		pictureColor[] = {0.0,0.3,0.6,1};
