@@ -57,6 +57,7 @@ def replaceTemplates():
 
 
 def inplace_change(filename, old_string, new_string):
+	print(filename)
     with open(filename) as f:
         s = f.read()
         old_string = "{"+old_string+"}"
