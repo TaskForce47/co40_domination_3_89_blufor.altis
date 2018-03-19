@@ -48,8 +48,9 @@ def replaceTemplates():
         if os.path.isdir(os.path.join(os.path.abspath(path), island)):
             curIsland =os.path.splitext(island)[1].strip('.').upper()
             for file in files:
+                filePath= "{}/{}/{}".format(path,island, file)
+                print(filePath)
                 for template in cfg['Templates']:
-                    filePath= "{}/{}/{}".format(path,island, file)
                     inplace_change(filePath, template, cfg['Templates'][template])
                 inplace_change(filePath, "VERSION", label)
                 inplace_change(filePath, "ISLAND", curIsland)
@@ -57,7 +58,6 @@ def replaceTemplates():
 
 
 def inplace_change(filename, old_string, new_string):
-	print(filename)
     with open(filename) as f:
         s = f.read()
         old_string = "{"+old_string+"}"
