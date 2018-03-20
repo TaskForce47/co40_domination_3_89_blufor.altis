@@ -101,9 +101,6 @@ if !(d_maintargets_list isEqualTo []) then {
 		call d_fnc_targetclearm;
 	};
 } else {
-	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-	[objNull,2, 20, true, 'Main Target'] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
-	/**************************************************************/
 	d_target_clear = true; publicVariable "d_target_clear";
 	//["d_" + _cur_tgt_name + "_dommtm", "ColorGreen"] remoteExecCall ["setMarkerColor", 2];
 	("d_" + _cur_tgt_name + "_dommtm") setMarkerColor "ColorGreen";
@@ -144,7 +141,9 @@ if !(d_maintargets_list isEqualTo []) then {
 };
 
 sleep 4.321;
-
+/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+[objNull,2, 20, true, 'Main Target'] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
+/**************************************************************/
 if (d_WithJumpFlags == 1 && {!(d_maintargets_list isEqualTo [])}) then {0 spawn d_fnc_createjumpflag};
 
 if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
