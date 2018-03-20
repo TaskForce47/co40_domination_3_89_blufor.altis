@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1109;
+		nextID=1110;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8264.2197,508.11035,1874.7037};
-		dir[]={-0.31435975,-0.84001178,0.44222158};
-		up[]={-0.48669511,0.54256755,0.68465221};
-		aside[]={0.81505102,-1.3576937e-007,0.57939088};
+		pos[]={7996.9878,323.8782,2042.6057};
+		dir[]={-0.35955712,-0.62869185,0.6896143};
+		up[]={-0.29066667,0.77764261,0.55748546};
+		aside[]={0.88675368,2.6688213e-008,0.46234417};
 	};
 };
 binarizationWanted=0;
@@ -91,13 +91,14 @@ addons[]=
 	"ace_captives",
 	"A3_Supplies_F_Heli_Slingload",
 	"ace_medical_menu",
-	"rhsusf_c_troops"
+	"rhsusf_c_troops",
+	"acre_api"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=55;
+		items=56;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -467,6 +468,13 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item55
+		{
+			className="acre_api";
+			name="ACRE2 - API";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
 	};
 };
 randomSeed=14455867;
@@ -522,7 +530,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=621;
+		items=622;
 		class Item0
 		{
 			dataType="Marker";
@@ -691,7 +699,7 @@ class Mission
 			position[]={4099.9302,531.367,11785.6};
 			name="d_sm_1";
 			type="Empty";
-			angle=84.999969;
+			angle=84.999962;
 			id=225;
 			atlOffset=507.41992;
 		};
@@ -913,7 +921,7 @@ class Mission
 			position[]={9793.8604,293.741,11158.9};
 			name="d_sm_21";
 			type="Empty";
-			angle=181.99994;
+			angle=181.99992;
 			id=249;
 			atlOffset=164.63676;
 		};
@@ -1044,7 +1052,7 @@ class Mission
 			position[]={11680.2,348.05899,9243.5898};
 			name="d_sm_29_3";
 			type="Empty";
-			angle=162.99994;
+			angle=162.99992;
 			id=263;
 			atlOffset=133.87364;
 		};
@@ -1074,7 +1082,7 @@ class Mission
 			position[]={11686,423.806,9156.4902};
 			name="d_sm_29_6";
 			type="Empty";
-			angle=174.99994;
+			angle=174.99992;
 			id=266;
 			atlOffset=202.12617;
 		};
@@ -1140,7 +1148,7 @@ class Mission
 			position[]={10502.5,427.09601,11002.5};
 			name="d_sm_31_2";
 			type="Empty";
-			angle=310.99988;
+			angle=310.99985;
 			id=273;
 			atlOffset=289.87601;
 		};
@@ -1150,7 +1158,7 @@ class Mission
 			position[]={10488,333.29999,10963.6};
 			name="d_sm_31_3";
 			type="Empty";
-			angle=226.99994;
+			angle=226.99992;
 			id=274;
 			atlOffset=195.57999;
 		};
@@ -1160,7 +1168,7 @@ class Mission
 			position[]={10480.9,285.95999,10999.9};
 			name="d_sm_31_4";
 			type="Empty";
-			angle=215.99994;
+			angle=215.99992;
 			id=275;
 			atlOffset=148.73999;
 		};
@@ -1180,7 +1188,7 @@ class Mission
 			position[]={10562.3,338.13901,10921.5};
 			name="d_sm_31_6";
 			type="Empty";
-			angle=219.99994;
+			angle=219.99992;
 			id=277;
 			atlOffset=198.41901;
 		};
@@ -1352,7 +1360,7 @@ class Mission
 			position[]={9418.0801,499.70599,10004};
 			name="d_sm_4";
 			type="Empty";
-			angle=209.99994;
+			angle=209.99992;
 			id=296;
 			atlOffset=334.60065;
 		};
@@ -23678,7 +23686,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8116.9541,296.93243,1996.677};
-				angles[]={-0,4.7123895,0};
+				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23830,6 +23838,230 @@ class Mission
 					};
 				};
 				nAttributes=3;
+			};
+		};
+		class Item621
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7989.1172,293.32639,2072.9309};
+				angles[]={0.039985489,0,0.020804325};
+			};
+			id=1109;
+			type="acre_api_nameChannels";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_nameChannels_Channel_1";
+					expression="_this setVariable ['Channel_1',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Radio Testing";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_nameChannels_Channel_2";
+					expression="_this setVariable ['Channel_2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Ground to Ground";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_nameChannels_Channel_3";
+					expression="_this setVariable ['Channel_3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Ground to Air";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acre_api_nameChannels_Channel_4";
+					expression="_this setVariable ['Channel_4',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Air to Air";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="acre_api_nameChannels_Channel_5";
+					expression="_this setVariable ['Channel_5',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CAS 1";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="acre_api_nameChannels_SideSelect";
+					expression="_this setVariable ['SideSelect',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="acre_api_nameChannels_Channel_6";
+					expression="_this setVariable ['Channel_6',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CAS 2";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="acre_api_nameChannels_Channel_7";
+					expression="_this setVariable ['Channel_7',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CAS 3";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="acre_api_nameChannels_Channel_8";
+					expression="_this setVariable ['Channel_8',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="DAGGER";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="acre_api_nameChannels_Channel_9";
+					expression="_this setVariable ['Channel_9',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FORECON ";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="acre_api_nameChannels_Channel_10";
+					expression="_this setVariable ['Channel_10',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="MISFIT";
+						};
+					};
+				};
+				nAttributes=11;
 			};
 		};
 	};
