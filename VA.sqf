@@ -1133,4 +1133,4 @@ _box = _x;
 _addActionText = "<t color=""#11F22F"">" + "Arsenal";
 ["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
-} forEach [arsenal1, arsenal2, arsenal3, arsenal4]; //[arsenal1, arsenal2, arsenal3]; //, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
+} forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6]; //[arsenal1, arsenal2, arsenal3]; //, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
