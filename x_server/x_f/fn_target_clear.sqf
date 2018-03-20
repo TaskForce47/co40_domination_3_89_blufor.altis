@@ -144,7 +144,7 @@ sleep 4.321;
 /*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
 [objNull,2, 20, true, 'Main Target'] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
 /**************************************************************/
-if (d_WithJumpFlags == 1 && {!(d_maintargets_list isEqualTo [])}) then {0 spawn d_fnc_createjumpflag};
+/* if (d_WithJumpFlags == 1 && {!(d_maintargets_list isEqualTo [])}) then {0 spawn d_fnc_createjumpflag}; */
 
 if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
 	remoteExecCall ["d_fnc_dodelrspgrps", d_HC_CLIENT_OBJ_OWNER];
