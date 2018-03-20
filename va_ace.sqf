@@ -8,18 +8,16 @@
 #define FRIENDLY_SIDE 6
 #define LOGIC_SIDE 7
 
-//if (isServer) then {
 {
-// Grab the parameter that was passed in.
-// The box should have "this execVM <scriptname>" in it's init field.
-//_box = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _box = _x;
-// Check if @XLA_FixedArsenal is loaded
-
-[_box, [
-
-    //PISTOLS
-    "rhsusf_weap_glock17g4",
+	clearWeaponCargoGlobal _box;
+	clearBackpackCargoGlobal _box;
+	clearItemCargoGlobal _box;
+	clearMagazineCargoGlobal _box;
+	
+[_box,
+	[
+	"rhsusf_weap_glock17g4",
     "rhsusf_weap_m1911a1",
     "rhsusf_weap_m9",
     "rhs_weap_M320",
@@ -227,15 +225,10 @@ _box = _x;
     "BWA3_CarlGustaf",
     "BWA3_Pzf3",
     "BWA3_RGW90",
-    "BWA3_Fliegerfaust"
-
-
-],false, true] call xla_fnc_addVirtualWeaponCargo;
-
-[_box, [
-
-    //PISTOL AMMO
-    "rhsusf_mag_17Rnd_9x19_JHP",
+    "BWA3_Fliegerfaust",
+	
+	/* AMMO */
+	"rhsusf_mag_17Rnd_9x19_JHP",
     "rhsusf_mag_17Rnd_9x19_FMJ",
     "rhsusf_mag_7x45acp_MHP",
     "rhsusf_mag_15Rnd_9x19_JHP",
@@ -503,13 +496,10 @@ _box = _x;
     //LASER BATTERIES
     "Laserbatteries",
     "rhs_LaserFCSMag",
-    "rhs_LaserMag"
-
-], false, true] call xla_fnc_addVirtualMagazineCargo;
-
-[_box, [
-
-    //BACKPACKS
+    "rhs_LaserMag",
+	
+	/*CLOTHES*/
+	//BACKPACKS
     "rhsusf_assault_eagleaiii_coy",
     "rhsusf_assault_eagleaiii_ocp",
     "rhsusf_assault_eagleaiii_ucp",
@@ -661,12 +651,9 @@ _box = _x;
 	"UK3CB_BAF_L16",
 	"UK3CB_BAF_M6",
 	"UK3CB_BAF_L16_Tripod",
-	"UK3CB_BAF_Tripod"
-
-], false, true] call xla_fnc_addVirtualBackpackCargo;
-
-[_box, [
-    //HEADGEAR
+	"UK3CB_BAF_Tripod",
+	
+	//HEADGEAR
     "rhsusf_ach_bare",
     "rhsusf_ach_bare_des",
     "rhsusf_ach_bare_des_ess",
@@ -1605,14 +1592,7 @@ _box = _x;
     "rhs_weap_optic_smaw",
     "rhs_optic_maaws",
     "BWA3_optic_CarlGustaf"
-
-], false, true] call xla_fnc_addVirtualItemCargo;
-
-//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
-//[_box, ["arifle_Katiba_BASE_F"],true,false] call XLA_fnc_addVirtualWeaponCargo;
-
-// Start the arsenal on it
-_addActionText = "<t color=""#11F22F"">" + "Arsenal";
-["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
-
-} forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6]; //[arsenal1, arsenal2, arsenal3]; //, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
+	
+	]
+] call ace_arsenal_fnc_initBox;
+} forEach [arsenal1, arsenal2, arsenal3, arsenal4, arsenal5, arsenal6];
