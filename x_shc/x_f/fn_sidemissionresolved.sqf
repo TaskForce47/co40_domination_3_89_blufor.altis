@@ -16,6 +16,9 @@ d_cur_sm_idx = -1; publicVariable "d_cur_sm_idx";
 __TRACE_2("","d_sm_winner","d_current_sm_bonus_vec")
 if (d_sm_winner > 0) then {
 	[d_sm_winner, d_current_sm_bonus_vec] remoteExec ["d_fnc_getbonus", 2];
+	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+	[objNull,2, 10, true, 'Side Mission'] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
+	/**************************************************************/
 };
 if (d_sm_winner in [-1,-2,-300,-400,-500,-600,-700,-878,-879,-880,-881,-900]) then {
 	[d_sm_winner, ""] remoteExecCall ["d_fnc_sm_res_client", [0, -2] select isDedicated];

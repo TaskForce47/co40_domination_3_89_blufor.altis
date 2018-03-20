@@ -28,7 +28,7 @@ if (!d_side_main_done) then {
 		sleep 30 + random 30;
 		if (alive d_fixor_var) then {
 			d_fixor_var setDamage 1;
-		};	
+		};
 	};
 	d_side_main_done = true;
 };
@@ -73,7 +73,7 @@ if (d_kill_points_blufor > d_kill_points_opfor) then {
 	};
 };
 publicVariable "d_mt_winner";
-d_points_array = [d_points_blufor, d_points_opfor, d_kill_points_blufor, d_kill_points_opfor]; 
+d_points_array = [d_points_blufor, d_points_opfor, d_kill_points_blufor, d_kill_points_opfor];
 publicVariable "d_points_array";
 
 d_resolved_targets pushBack [d_current_target_index, d_mt_winner];
@@ -101,6 +101,9 @@ if !(d_maintargets_list isEqualTo []) then {
 		call d_fnc_targetclearm;
 	};
 } else {
+	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
+	[objNull,2, 20, true, 'Main Target'] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
+	/**************************************************************/
 	d_target_clear = true; publicVariable "d_target_clear";
 	//["d_" + _cur_tgt_name + "_dommtm", "ColorGreen"] remoteExecCall ["setMarkerColor", 2];
 	("d_" + _cur_tgt_name + "_dommtm") setMarkerColor "ColorGreen";
