@@ -23,7 +23,7 @@ switch (param [1]) do {
 			parseText("<t size='1'>" + format [localize "STR_DOM_MISSIONSTRING_663", _tgt_name] + "</t>")
 		];
 		/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
-		[objNull,2, 5, true, format ["%1 recaptured",_tgt_name]] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
+		[objNull,5, 5, true, format ["%1 recaptured",_tgt_name]] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
 		/***************************************************************/
 	};
 };

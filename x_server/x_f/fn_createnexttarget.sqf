@@ -28,6 +28,7 @@ d_cur_target_radius = _d_t_n_c_t_i select 2;
 publicVariable "d_cur_target_radius";
 d_mttarget_radius_patrol = d_cur_target_radius + 200 + random 200;
 publicVariable "d_mttarget_radius_patrol";
+[d_cur_tgt_name,7, 0, true, format[ 'Next Main Target is %1', d_cur_tgt_name ]] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
 
 sleep 1.0123;
 if (d_first_time_after_start) then {
