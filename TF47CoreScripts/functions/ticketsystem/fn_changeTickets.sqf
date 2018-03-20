@@ -3,7 +3,7 @@
  *  @description
  *  Performs a ticket change, shows a notification and inserts it into
  *  the Database
- *  @params 
+ *  @params
  *      param 0: Vehicle or Player <object>
  *      param 1: Action id <number>
  *      param 2: Ticket amount <number>
@@ -20,15 +20,15 @@ _result = _this params [
 ];
 
 
-if(!isServer) exitWith { 
+if(!isServer) exitWith {
     ["changeTickets not called on Server!", "Error", true] spawn
         BIS_fnc_guiMessage;
  };
 
 // default change is no change
 if(_amount == 0) then {
-    _amount = missionNamespace getVariable 
-        [format ["tf47_core_ticketsystem_cost_%1", 
+    _amount = missionNamespace getVariable
+        [format ["tf47_core_ticketsystem_cost_%1",
         (_object call BIS_fnc_netId)], 0];
     //_amount = _object getVariable ["tf47_core_ticketsystem_cost", 0];
 };
@@ -43,8 +43,8 @@ if(typeName _object == "OBJECT") then {
         if(_object isKindOf "Man") then {
             _message = format["%1 ist gestorben!", name _object]
         } else {
-            if(missionNamespace getVariable 
-                [format ["tf47_core_ticketsystem_deserted_%1", 
+            if(missionNamespace getVariable
+                [format ["tf47_core_ticketsystem_deserted_%1",
                 (_object call BIS_fnc_netId)], false]) then {
             //if(_object getVariable ["tf47_core_ticketsystem_deserted", false]) then {
                 _message = format["%1 wurde zurückgelassen!", getText (configFile >>
@@ -74,14 +74,14 @@ if(_positiveChange) then {
 if(_customText == "") then {
     _message = format["%1 <br/> %2 %3", _message, _ticketMessage, _amount];
 } else {
-    _message = _customText;
+    _message = format["%1 <br/> %2 %3", _customText, _ticketMessage, _amount];
 };
 
 // check for soft/hardcap
 _newTickets = tf47_core_ticketsystem_tickets + _amount;;
 
 if(_newTickets >= tf47_core_ticketsystem_softcap) then {
-    _newTickets = tf47_core_ticketsystem_softcap + 
+    _newTickets = tf47_core_ticketsystem_softcap +
         (((tf47_core_ticketsystem_tickets + _amount)
         - tf47_core_ticketsystem_softcap) / 2);
 };
@@ -107,7 +107,7 @@ publicVariable "tf47_core_ticketsystem_tickets";
 if(tf47_core_ticketsystem_tickets <= 0) then {
     tf47_core_ticketsystem_endingScript = [] spawn {
         sleep 5;
-        [12, 0, objNull, "Mission verloren"] 
+        [12, 0, objNull, "Mission verloren"]
             call tf47_core_ticketsystem_fnc_insertTicketlog;
         sleep 10;
         ["tf47_core_missionLost", false, true] remoteExecCall
