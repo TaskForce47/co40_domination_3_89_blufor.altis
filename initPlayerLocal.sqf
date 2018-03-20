@@ -21,7 +21,7 @@ if (hasInterface) then {
 execVM "tasks.sqf";
 diag_log [diag_frameno, diag_ticktime, time, "MPF initPlayerLocal.sqf processed"];
 
-_null = [] execVM "VA.sqf";
+_null = [] execVM "va_ace.sqf";
 /* TF47CoreScripts - Start */
 waitUntil {
 	if(!(isNil "tf47_core_server_init")) then {
