@@ -280,7 +280,7 @@ d_entities_tt_opfor = ["d_artop_opfor","d_opfor_1","d_opfor_2","d_opfor_3","d_op
 
 d_servicepoint_building = "Land_Cargo_House_V2_F";
 
-d_illum_tower = "Land_TTowerBig_2_F";
+d_illum_tower = "Land_Ind_IlluminantTower";
 #ifndef __IFA3LITE__
 d_wcamp = "Land_BagBunker_Large_F";
 #else
@@ -867,9 +867,9 @@ if (!d_tt_tanoa) then {
 	d_isle_defense_marker = "n_mech_inf";
 
 	d_air_radar = switch (d_enemy_side_short) do {
-		case "W": {"Land_Radar_Small_F"};
-		case "E": {"Land_Radar_Small_F"};
-		case "G": {"Land_Radar_Small_F"};
+		case "W": {"rhs_prv13"};
+		case "E": {"rhs_prv13"};
+		case "G": {"rhs_prv13"};
 	};
 
 	d_enemy_hq = switch (d_enemy_side_short) do {
