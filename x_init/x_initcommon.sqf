@@ -27,6 +27,7 @@ if (isNil "paramsArray") then {
 d_with_ranked = d_with_ranked == 0;
 #ifndef __TT__
 d_with_ai = d_with_ai == 0;
+d_WithJumpFlags = 0;
 #else
 d_with_ai = false;
 d_with_ai_features = 1;
