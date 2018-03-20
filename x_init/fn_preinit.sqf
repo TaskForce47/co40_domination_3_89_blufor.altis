@@ -282,7 +282,7 @@ d_servicepoint_building = "Land_Cargo_House_V2_F";
 
 d_illum_tower = "Land_TTowerBig_2_F";
 #ifndef __IFA3LITE__
-d_wcamp = "Land_Cargo_Patrol_V1_F";
+d_wcamp = "Land_BagBunker_Large_F";
 #else
 d_wcamp = "Land_Misc_deerstand";
 #endif
