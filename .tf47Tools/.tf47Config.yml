@@ -14,4 +14,4 @@ GitHub:
   org: TaskForce47
   repo: co40_domination_3_89_blufor.altis
 Templates:
-  NAME_TPL: CO@64 Task Force Dagger Domination {ISLAND} Mod {VERSION}
+  NAME_TPL: CO@64 TF Dagger Domination {ISLAND}-{VERSION}
