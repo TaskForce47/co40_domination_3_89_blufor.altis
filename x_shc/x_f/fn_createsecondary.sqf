@@ -32,7 +32,7 @@ _vec setVectorUp [0,0,1];
 [_vec] call d_fnc_CheckMTHardTarget;
 d_mt_radio_down = false;
 [missionNamespace, ["d_mt_radio_down", false]] remoteExecCall ["setVariable", 2];
-["d_main_target_radiotower", _poss,"ICON","ColorBlack",[0.5,0.5],localize "STR_DOM_MISSIONSTRING_521",0,"mil_dot"] remoteExecCall ["d_fnc_CreateMarkerGlobal", 2];
+/* ["d_main_target_radiotower", _poss,"ICON","ColorBlack",[0.5,0.5],localize "STR_DOM_MISSIONSTRING_521",0,"mil_dot"] remoteExecCall ["d_fnc_CreateMarkerGlobal", 2]; */
 
 #ifndef __TT__
 [9] remoteExecCall ["d_fnc_DoKBMsg", 2];
@@ -145,7 +145,7 @@ for "_i" from 1 to _nrcamps do {
 	_maname = format["d_camp%1",_i];
 	[_maname, _poss,"ICON","ColorBlack",[0.5,0.5],"",0,d_strongpointmarker] remoteExecCall ["d_fnc_CreateMarkerGlobal", 2];
 	_flagPole setFlagTexture (call d_fnc_getenemyflagtex);
-	
+
 	_wf addEventHandler ["HandleDamage", {0}];
 	//[_wf, _flagPole] call d_fnc_HandleCamps2;
 #ifndef __TT__
@@ -154,7 +154,7 @@ for "_i" from 1 to _nrcamps do {
 	[_wf, _flagPole] execFSM "fsms\fn_HandleCampsTT2.fsm";
 #endif
 	sleep 0.5;
-	
+
 	private _newgroup = [d_side_enemy] call d_fnc_creategroup;
 	[_poss, ["specops", d_enemy_side_short] call d_fnc_getunitlistm, _newgroup] spawn d_fnc_makemgroup;
 	_newgroup deleteGroupWhenEmpty true;

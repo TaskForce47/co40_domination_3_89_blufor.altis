@@ -11,7 +11,7 @@ _vec addEventHandler ["killed", {
 	};
 	d_mt_radio_down = true;
 	[missionNamespace, ["d_mt_radio_down", true]] remoteExecCall ["setVariable", 2];
-	"d_main_target_radiotower" remoteExecCall ["deleteMarker", 2];
+	/* "d_main_target_radiotower" remoteExecCall ["deleteMarker", 2]; */
 	/*****ADD*TICKETS*TO*ACTUAL*TICKET*AMOUNT*BY*TASKFORCE47*******/
 	[objNull,5, 5, true, "Radio Tower"] remoteExecCall ["tf47_core_ticketsystem_fnc_changeTickets", 2];
 	/**************************************************************/
