@@ -31,7 +31,7 @@ d_with_ai = d_with_ai == 0;
 d_with_ai = false;
 d_with_ai_features = 1;
 d_WithRecapture = 1;
-d_WithJumpFlags = 1;
+d_WithJumpFlags = 0;
 d_MaxNumAmmoboxes = d_MaxNumAmmoboxes * 2;
 d_pilots_only = 1;
 #endif
@@ -219,7 +219,7 @@ if (isServer || {!isDedicated && {!hasInterface}}) then {
 			];
 		};
 	};
-	
+
 	// enemy ai skill: [base skill, random value (random 0.3) that gets added to the base skill]
 	d_skill_array = switch (d_EnemySkill) do {
 		case 1: {[0.2,0.1]};
