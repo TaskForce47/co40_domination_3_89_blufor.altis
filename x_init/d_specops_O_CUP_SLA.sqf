@@ -1,2 +1,5 @@
-["East","rhs_faction_vmf","rhs_group_rus_vmf_infantry_recon","rhs_group_rus_vmf_infantry_recon_fireteam"] call d_fnc_GetConfigGroup,
-["East","rhs_faction_vmf","rhs_group_rus_vmf_infantry_recon","rhs_group_rus_vmf_infantry_recon_squad"] call d_fnc_GetConfigGroup
+["East","LOP_SLA","Infantry","LOP_SLA_AA_section"] call d_fnc_GetConfigGroup,
+["East","LOP_SLA","Infantry","LOP_SLA_AT_section"] call d_fnc_GetConfigGroup,
+["East","LOP_SLA","Infantry","LOP_SLA_Patrol_section"] call d_fnc_GetConfigGroup,
+["East","LOP_SLA","Infantry","LOP_SLA_Rifle_squad"] call d_fnc_GetConfigGroup,
+["East","LOP_SLA","Infantry","LOP_SLA_Support_section"] call d_fnc_GetConfigGroup

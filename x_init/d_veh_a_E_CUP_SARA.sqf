@@ -1,12 +1,12 @@
-["rhs_t72bd_tv","rhs_t90a_tv","rhs_t80um"],
-["rhs_bmp1_vdv","rhs_bmp1d_vdv","rhs_bmp1k_vdv","rhs_bmp1p_vdv"],
-["rhs_bmp2e_vdv","rhs_bmp2k_vdv","rhs_bmp3_msv","rhs_btr60_vmf"],
-["rhs_zsu234_aa","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"],
-["rhs_tigr_sts_vdv","rhs_tigr_m_vdv"],
-["rhs_tigr_sts_vdv"],
-["rhs_KORD_MSV","rhs_KORD_high_MSV","CUP_O_DSHKM_TK_INS","CUP_O_DSHkM_MiniTriPod_TK_INS"], //O_GMG_01_A_F, removed because it creates an invisible gunner (UAV type)
-["rhs_SPG9M_MSV","RHS_AGS30_TriPod_MSV","rhs_Metis_9k115_2_msv"], // O_HMG_01_A_F, removed because it creates an invisible gunner (UAV type)
-["rhs_D30_msv"],
-["RHS_Ural_Fuel_MSV_01"],
-["RHS_Ural_Repair_MSV_01"],
-["rhs_gaz66_ammo_vmf"]
+["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA"],
+["LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2"],
+["LOP_ISTS_OPF_BTR60"],
+["LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"],
+["LOP_BH_Landrover_M2","LOP_BH_Offroad_M2","LOP_BH_Nissan_PKM"],
+["LOP_BH_Landrover_SPG9"],
+["LOP_ISTS_OPF_Static_DSHKM","LOP_ISTS_OPF_Kord","LOP_ISTS_OPF_Kord_High","LOP_ISTS_OPF_NSV_TriPod",], //O_GMG_01_A_F, removed because it creates an invisible gunner (UAV type)
+["LOP_ISTS_OPF_Static_Mk19_TriPod","LOP_ISTS_OPF_Igla_AA_pod","LOP_ISTS_OPF_AGS30_TriPod","LOP_ISTS_OPF_Static_SPG9","LOP_ISTS_OPF_Static_AT4"], // O_HMG_01_A_F, removed because it creates an invisible gunner (UAV type)
+["LOP_IRAN_Static_D30"],
+["LOP_IRAN_KAMAZ_Fuel"],
+["LOP_IRAN_KAMAZ_Repair"],
+["LOP_IRAN_KAMAZ_Ammo"]

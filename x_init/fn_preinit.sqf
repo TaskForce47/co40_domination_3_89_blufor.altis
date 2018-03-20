@@ -677,28 +677,28 @@ if (!d_tt_tanoa) then {
 	];
 
 #ifdef __ALTIS__
-	d_arti_observer_E = [["O_recon_JTAC_F"]];
+	d_arti_observer_E = [["LOP_BH_Infantry_TL"]];
 #endif
 #ifdef __CUP_CHERNARUS__
-	d_arti_observer_E = [["O_recon_JTAC_F"]];
+	d_arti_observer_E = [["LOP_ChDKZ_Infantry_SL"]];
 #endif
 #ifdef __CUP_TAKISTAN__
-	d_arti_observer_E = [["CUP_O_RUS_SpecOps_Scout_Autumn"]];
+	d_arti_observer_E = [["LOP_ISTS_OPF_Infantry_SL"]];
 #endif
 #ifdef __CUP_SARA__
-	d_arti_observer_E = [["CUP_O_sla_Officer"]];
+	d_arti_observer_E = [["LOP_BH_Infantry_TL"]];
 #endif
 #ifdef __IFA3LITE__
 	d_arti_observer_E = [["O_recon_JTAC_F"]];
 #endif
 #ifdef __TANOA__
-	d_arti_observer_E = [["O_T_Recon_JTAC_F"]];
+	d_arti_observer_E = [["LOP_BH_Infantry_TL"]];
 #endif
 #ifdef __STRATIS__
-	d_arti_observer_E = [["O_recon_JTAC_F"]];
+	d_arti_observer_E = [["LOP_BH_Infantry_TL"]];
 #endif
 #ifdef __MALDEN__
-	d_arti_observer_E = [["O_recon_JTAC_F"]];
+	d_arti_observer_E = [["LOP_BH_Infantry_TL"]];
 #endif
 #ifndef __IFA3LITE__
 	d_arti_observer_W = [["B_recon_JTAC_F"]];
