@@ -19,6 +19,11 @@ force ace_advanced_throwing_enablePickUp = true;
 force ace_advanced_throwing_enablePickUpAttached = true;
 force ace_advanced_throwing_showMouseControls = true;
 force ace_advanced_throwing_showThrowArc = true;
+// ACE Cook off
+force ace_cookoff_enable = false;
+force ace_cookoff_enableAmmobox = false;
+force ace_cookoff_enableAmmoCookoff = false;
+
 
 // ACE Captives
 force ace_captives_allowHandcuffOwnSide = true;
