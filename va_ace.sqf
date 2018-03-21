@@ -468,6 +468,14 @@ _box = _x;
     "rhs_mag_m7a3_cs",
     "rhs_mag_mk84",
     "rhs_mag_mk3a2",
+	
+	"UK3CB_BAF_SmokeShellYellow",
+	"UK3CB_BAF_SmokeShellPurple",
+	"UK3CB_BAF_SmokeShell",
+	"UK3CB_BAF_SmokeShellGreen",
+	"UK3CB_BAF_SmokeShellOrange",
+	"UK3CB_BAF_SmokeShellRed",
+	"UK3CB_BAF_SmokeShellBlue",
 
     "BWA3_DM25",
     "BWA3_DM32_Yellow",
@@ -497,6 +505,20 @@ _box = _x;
     "Laserbatteries",
     "rhs_LaserFCSMag",
     "rhs_LaserMag",
+	
+	//STATIC MUNI
+	"UK3CB_BAF_1Rnd_60mm_Mo_Shells",
+	"UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
+	"UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
+	"UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
+	"UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
+	"UK3CB_BAF_127_100Rnd",
+	"UK3CB_BAF_32Rnd_40mm_G_Box",
+	"UK3CB_BAF_1Rnd_81mm_Mo_Shells",
+	"UK3CB_BAF_1Rnd_81mm_Mo_Flare_White",
+	"UK3CB_BAF_1Rnd_81mm_Mo_IRFlare_White",
+	"UK3CB_BAF_1Rnd_81mm_Mo_Smoke_White",
+	"UK3CB_BAF_1Rnd_81mm_Mo_WPSmoke_White",
 	
 	/*CLOTHES*/
 	//BACKPACKS
@@ -529,7 +551,7 @@ _box = _x;
     "BWA3_TacticalPack_Fleck_Medic",
     "BWA3_TacticalPack_Tropen",
     "BWA3_TacticalPack_Tropen_Medic",
-
+	/* TFR RADIO
     "tfw_ilbe_coy",
     "tfw_ilbe_a_coy",
     "tfw_ilbe_blade_coy",
@@ -549,12 +571,12 @@ _box = _x;
     "tfw_ilbe_a_wd",
     "tfw_ilbe_blade_wd",
     "tfw_ilbe_dd_wd",
-
+	
+	"tf_rt1523g_big_rhs",
+    "tf_rt1523g_rhs",
+	*/
     "ace_gunbag",
     "ace_gunbag_Tan",
-
-    "tf_rt1523g_big_rhs",
-    "tf_rt1523g_rhs",
 
 	"milgp_bp_Breacher_cb",
 	"milgp_bp_Breacher_mc",
@@ -1758,6 +1780,28 @@ _box = _x;
     "rhsusf_acc_rotex_mp7_aor1",
     "rhsusf_acc_rotex_mp7_desert",
     "rhsusf_acc_rotex_mp7_winter",
+	"rhsusf_acc_RM05",
+	"rhsusf_acc_RM05_fwd",
+	"rhsusf_acc_RX01_NoFilter",
+	"rhsusf_acc_RX01",
+	"rhsusf_acc_SpecterDR_CX",
+	"rhsusf_acc_anpeq15side",
+	"rhsusf_acc_anpeq15_top_h",
+	"rhsusf_acc_anpeq15_wmx_h",
+	"rhsusf_acc_anpeq15_wmx_light_h",
+	"rhsusf_acc_anpeq15side_bk",
+	"rhsusf_acc_anpeq15_bk_top_h",
+	"rhsusf_acc_anpeq15_h",
+	"rhsusf_acc_anpeq15_light_h",
+	"rhsusf_acc_anpeq15_bk_h",
+	"rhsusf_acc_anpeq15_bk_light_h",
+	"rhsusf_acc_anpeq16a",
+	"rhsusf_acc_anpeq16a_light",
+	"rhsusf_acc_anpeq16a_top_h",
+	"rhsusf_acc_anpeq16a_light_top_h",
+	"rhsusf_acc_M952V",
+	"rhsusf_acc_wmx",
+	"rhsusf_acc_wmx_bk",
 
     "BWA3_muzzle_snds_G28",
     "BWA3_acc_LLM01_irlaser",
