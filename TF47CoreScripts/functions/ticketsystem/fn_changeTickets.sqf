@@ -97,7 +97,7 @@ tf47_core_ticketsystem_tickets = floor _newTickets;
 publicVariable "tf47_core_ticketsystem_tickets";
 
 // insert ticket change into the db
-[_action, _amount, _object] call tf47_core_ticketsystem_fnc_insertTicketlog;
+[_action, _amount, _object,_customText] call tf47_core_ticketsystem_fnc_insertTicketlog;
 
 // show message to all clients
 [_notificationClass,[_message]] remoteExecCall
