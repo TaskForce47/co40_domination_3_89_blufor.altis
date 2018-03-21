@@ -136,7 +136,7 @@ if !(d_maintargets_list isEqualTo []) then {
 			};
 		};
 #endif
-		d_current_target_index execFSM "fsms\fn_DeleteUnits.fsm";
+		/* d_current_target_index execFSM "fsms\fn_DeleteUnits.fsm"; */
 	};
 };
 
