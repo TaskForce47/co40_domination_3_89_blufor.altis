@@ -17,7 +17,7 @@ diag_log _data;
 _marker = _data select 0;
 _vehicleClass = _data select 1;
 
-if(count (nearestObjects 
+if(count (nearestObjects
 	[getMarkerPos _marker, ["LandVehicle","Air", "Ship", "Thing"], 5]) >= 1)
 	exitWith {
 	systemChat "Es gibt nicht genug Platz um dieses Fahrzeug zu spawnen!";
@@ -36,12 +36,12 @@ if(_vehicleClass == "B_supplyCrate_F" ||
     clearMagazineCargoGlobal _vehicle;
 };
 
-if((_vehicleClass == "RHS_M119_WD" || _vehicleClass == "RHS_M119_D") && 
+if((_vehicleClass == "RHS_M119_WD" || _vehicleClass == "RHS_M119_D") &&
 	!isNil "ace_cargo_fnc_setSize") then {
 	[_vehicle, -1] call ace_cargo_fnc_setSize;
 };
 
-if(_vehicleClass == "Land_CanisterFuel_F" 
+if(_vehicleClass == "Land_CanisterFuel_F"
 	&& !isNil "ace_refuel_fnc_makeJerryCan") then {
 	[_vehicle] call ace_refuel_fnc_makeJerryCan;
 	[_vehicle, true] remoteExecCall ["ace_dragging_fnc_setDraggable"];
@@ -55,8 +55,10 @@ if(_vehicleClass in ["rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
 };
 
 if(_vehicleClass in ["rhsusf_M1230a1_usarmy_wd", "rhsusf_M1230a1_usarmy_d",
-	"RHS_UH60M_MEV2_d", "RHS_UH60M_MEV_d", "RHS_UH60M_MEV2", 
-	"RHS_UH60M_MEV"]) then {
+	"RHS_UH60M_MEV2_d", "RHS_UH60M_MEV_d", "RHS_UH60M_MEV2",
+	"RHS_UH60M_MEV","Redd_Tank_Fuchs_1A4_San_Flecktarn","Redd_Tank_Fuchs_1A4_San_Tropentarn",
+	"UK3CB_BAF_LandRover_Amb_FFR_Green_A_MTP","UK3CB_BAF_LandRover_Amb_FFR_Sand_A_MTP",
+	"UK3CB_BAF_Merlin_HC3_CSAR_MTP"]) then {
 	_vehicle setVariable ["ace_medical_medicClass", 1, true];
 };
 
@@ -66,20 +68,20 @@ if((getText (configfile >> "CfgVehicles" >> _vehicleClass >> "crew")) in [
 };
 
 // handle corescripts
-if((_data select 3) != -1 && 
+if((_data select 3) != -1 &&
 	!isNil "tf47_core_ticketsystem_fnc_registerVehicle") then {
-	[_vehicle, _data select 3] remoteExecCall 
+	[_vehicle, _data select 3] remoteExecCall
 		["tf47_core_ticketsystem_fnc_registerVehicle", 2];
 };
 
 if((_data select 2) > 0 && (count (_data select 4)) > 0 &&
 	!isNil "tf47_core_whitelist_fnc_registerWhitelist") then {
-	[_vehicle, _data select 2, _data select 4] remoteExecCall 
+	[_vehicle, _data select 2, _data select 4] remoteExecCall
 		["tf47_core_whitelist_fnc_registerWhitelist", 2];
 };
 
 //equip fries
-if(isNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) 
+if(isNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle)
 	>> "ace_fastroping_enabled")) then {
 	[_vehicle] remoteExecCall ["ace_fastroping_fnc_equipFRIES", 2];
 };
