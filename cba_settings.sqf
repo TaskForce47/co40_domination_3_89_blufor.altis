@@ -57,7 +57,7 @@ force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 force ace_repair_repairDamageThreshold = 0.5;
 force ace_repair_repairDamageThreshold_engineer = 0.5;
-force ace_repair_wheelRepairRequiredItems = 1;
+force ace_repair_wheelRepairRequiredItems = 0;
 
 // ACE Map
 force ace_map_BFT_Enabled = true;
