@@ -26,6 +26,8 @@ loadScreen = "pics\domls.paa";
 overviewText = "Seize various main targets and resolve side missions...";
 
 enableDebugConsole = 1;
+cba_settings_hasSettingsFile = 1;
+
 class Header {
 		gameType = Coop;
 		minPlayers = 1;
