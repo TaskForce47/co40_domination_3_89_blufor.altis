@@ -222,7 +222,7 @@ if (d_MissionType != 2) then {
 if (d_with_ai || {d_ParaAtBase == 0}) then {
 #ifndef __TT__
 	if (isNil {d_FLAG_BASE getVariable "d_jf_id"}) then {
-		d_FLAG_BASE setVariable ["d_jf_id", d_FLAG_BASE addaction [format ["<t color='#7F7F7F'>%1</t>", localize "STR_DOM_MISSIONSTRING_296"], {_this spawn d_fnc_paraj},0,1.5,true,true,"",((count allPlayers) < 15)]];
+		d_FLAG_BASE setVariable ["d_jf_id", d_FLAG_BASE addaction [format ["<t color='#7F7F7F'>%1</t>", localize "STR_DOM_MISSIONSTRING_296"], {_this spawn d_fnc_paraj},0,1.5,true,true,"","((count allPlayers) < 15)"]];
 	};
 #else
 	private _base_flag = [d_EFLAG_BASE, d_WFLAG_BASE] select (d_player_side == blufor);
