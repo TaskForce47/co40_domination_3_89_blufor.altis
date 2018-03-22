@@ -70,7 +70,7 @@ d_bonus_vec_positions_w = [];
 // add some random patrols on the island
 // if the array is empty, no patrols
 // simply place a rectangular marker called "d_isledefense_marker", marker text = number of patrols
-if (d_WithIsleDefense == 0) then {
+if (true) then {
 	private _mna = "d_isledefense_marker";
 	if (markerPos _mna isEqualTo [0,0,0]) exitWith {
 		d_with_isledefense = [];
@@ -91,7 +91,7 @@ if (d_MissionType != 2) then {
 		private _stype = [d_servicepoint_building] call BIS_fnc_simpleObjectData;
 		private _pos = [];
 		private _fac = objNull;
-		
+
 		if !((d_service_buildings select 0) isEqualTo []) then {
 			_pos = (d_service_buildings select 0) select 0;
 			_pos set [2, 3.3];
