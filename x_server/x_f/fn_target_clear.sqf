@@ -136,7 +136,7 @@ if !(d_maintargets_list isEqualTo []) then {
 			};
 		};
 #endif
-		/* d_current_target_index execFSM "fsms\fn_DeleteUnits.fsm"; */
+		d_current_target_index execFSM "fsms\fn_DeleteUnits.fsm";
 	};
 };
 
@@ -146,11 +146,11 @@ sleep 4.321;
 /**************************************************************/
 /* if (d_WithJumpFlags == 1 && {!(d_maintargets_list isEqualTo [])}) then {0 spawn d_fnc_createjumpflag}; */
 
-if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
+/* if (!isNil "d_HC_CLIENT_OBJ_OWNER") then {
 	remoteExecCall ["d_fnc_dodelrspgrps", d_HC_CLIENT_OBJ_OWNER];
 } else {
 	call d_fnc_dodelrspgrps;
-};
+}; */
 
 _del_camps_stuff = [];
 {
