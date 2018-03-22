@@ -3,6 +3,7 @@
 #include "..\x_setup.sqf"
 
 __TRACE("Running HC setup")
+diag_log [diag_frameno, diag_ticktime, time, "Executing Dom setuphc.sqf"];
 
 player removeAllEventHandlers "handleDamage";
 player removeAllEventHandlers "respawn";
@@ -34,5 +35,6 @@ d_island_x_max = _confmapsize;
 d_island_y_max = _confmapsize;
 
 [missionNamespace, ["d_HC_CLIENT_READY", true]] remoteExecCall ["setVariable", 2];
+diag_log [diag_frameno, diag_ticktime, time, "Dom setuphc.sqf processed"];
 
 __TRACE("HC setup done")

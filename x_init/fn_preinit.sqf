@@ -60,7 +60,7 @@ d_rhs = false;
 #else
 d_rhs = true;
 #endif
-
+d_IS_HC_CLIENT = !isDedicated && {!hasInterface};
 d_HeliHEmpty = "Land_HelipadEmpty_F";
 
 // BLUFOR, OPFOR or INDEPENDENT for own side, setup in x_setup.sqf

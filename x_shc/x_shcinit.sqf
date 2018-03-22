@@ -4,6 +4,7 @@
 #include "..\x_setup.sqf"
 
 __TRACE("x_shcinit")
+diag_log [diag_frameno, diag_ticktime, time, "Executing Dom shcinit.sqf"];
 
 if !(call d_fnc_checkSHC) exitWith {};
 
@@ -51,5 +52,5 @@ if (d_MissionType != 2) then {
 #endif
 
 if !(d_with_isledefense isEqualTo []) then {execVM "x_shc\x_isledefense.sqf"};
-
+diag_log [diag_frameno, diag_ticktime, time, "Dom shcinit.sqf processed"];
 __TRACE("x_shcinit done")
