@@ -32,7 +32,7 @@ deleteVehicle _jumphelo;
 sleep 3;
 
 if (d_with_ai && {alive player && {!(player getVariable ["xr_pluncon", false]) && {!(player getVariable ["ace_isunconscious", false])}}}) then {[getPosATL player, velocity player, getDirVisual player] spawn d_fnc_moveai};
-
+/*
 d_jump_action_id = player addAction [localize "str_a3_rscgrouprootmenu_items_openparachute0", {
 	private _chute = createVehicle ["Steerable_Parachute_F", [0,0, getPos player select 2], [], 0, "FLY"];
 	_chute setDir (getDir player);
@@ -40,4 +40,4 @@ d_jump_action_id = player addAction [localize "str_a3_rscgrouprootmenu_items_ope
 	player moveInDriver _chute;
 	player removeAction d_jump_action_id;
 	d_jump_action_id = nil;
-}, 0, 6, false, false, "", "if (!alive player || {player getVariable ['xr_pluncon', false] || {getPos player select 2 < 1.5 || {player getVariable ['ace_isunconscious', false]}}}) then {player removeAction d_jump_action_id;d_jump_action_id = nil; false} else {true}"];
+}, 0, 6, false, false, "", "if (!alive player || {player getVariable ['xr_pluncon', false] || {getPos player select 2 < 1.5 || {player getVariable ['ace_isunconscious', false]}}}) then {player removeAction d_jump_action_id;d_jump_action_id = nil; false} else {true}"]; */
