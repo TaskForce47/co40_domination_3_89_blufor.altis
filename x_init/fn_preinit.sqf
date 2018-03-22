@@ -710,8 +710,8 @@ if (!d_tt_tanoa) then {
 #endif
 	d_arti_observer_G = [["I_Soldier_TL_F"]];
 
-	d_number_attack_planes = 1;
-	d_number_attack_choppers = 1;
+	d_number_attack_planes = 2;
+	d_number_attack_choppers = 2;
 
 	// Type of aircraft, that will air drop stuff
 	d_drop_aircraft =
@@ -912,7 +912,7 @@ if (!d_tt_tanoa) then {
 	// type of enemy chopper that will fly over the main target
 	d_airai_attack_chopper = switch (d_enemy_side_short) do {
 		case "E": {["RHS_Mi24V_vvs"]};
-		case "W": {["B_Heli_Attack_01_F"]};
+		case "W": {["RHS_Mi24V_vvs"]};
 		case "G": {["RHS_Mi24V_vvs"]};
 	};
 #endif
