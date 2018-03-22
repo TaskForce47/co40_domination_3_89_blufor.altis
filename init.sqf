@@ -18,7 +18,7 @@ if (isMultiplayer && {hasInterface}) then {
 if (d_IS_HC_CLIENT) then {
 	__TRACE("Headless client found")
 	call compile preprocessFileLineNumbers "x_shc\x_setuphc.sqf";
-}
+};
 enableSaving [false,false];
 enableTeamSwitch false;
 
