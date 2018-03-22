@@ -95,34 +95,34 @@ __TRACE_1("","d_sm_array")
 
 d_number_side_missions = count d_sm_array;
 
-if (call d_fnc_checkSHC) then {		
+if (call d_fnc_checkSHC) then {
 	// these vehicles get spawned in a convoy sidemission. Be aware that it is the best to use a wheeled vehicle first as leader.
 	// at least wheeled AI vehicles try to stay on the road somehow
 #ifdef __ALTIS__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
 		//case "E": {["O_MRAP_02_gmg_F","O_APC_Tracked_02_cannon_F", "O_MBT_02_cannon_F", "O_Truck_02_box_F", "O_Truck_02_fuel_F", "O_Truck_02_Ammo_F", "O_APC_Tracked_02_AA_F"]};
-		case "E": {["O_MRAP_02_hmg_F","O_APC_Wheeled_02_rcws_F", "O_MRAP_02_gmg_F", "O_Truck_03_repair_F", "O_Truck_03_fuel_F", "O_Truck_03_ammo_F", "O_APC_Wheeled_02_rcws_F"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2", "LOP_ISTS_OPF_BTR60", "LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_hmg_F","B_APC_Wheeled_01_cannon_F", "B_MRAP_01_gmg_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Wheeled_01_cannon_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
 #endif
 #ifdef __CUP_CHERNARUS__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_GAZ_Vodnik_PK_RU","CUP_O_BTR90_RU", "CUP_O_BRDM2_RUS", "CUP_O_Ural_Repair_RU", "CUP_O_Ural_Refuel_RU", "CUP_O_Ural_Reammo_RU", "CUP_O_BTR90_RU"]};
+		case "E": {["LOP_ChDKZ_T72BA","LOP_ChDKZ_T72BB","LOP_ChDKZ_T72BC","LOP_ChDKZ_BMP1","LOP_ChDKZ_BMP1D","LOP_ChDKZ_BMP2","LOP_ChDKZ_BMP2D","LOP_ChDKZ_BTR60","LOP_ChDKZ_BTR70","LOP_ChDKZ_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_gmg_F","B_APC_Tracked_01_rcws_F", "B_MBT_01_cannon_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Tracked_01_AA_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
 #endif
 #ifdef __CUP_TAKISTAN__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_BTR60_TK","CUP_O_BRDM2_TKA", "CUP_O_BTR60_TK", "CUP_O_Ural_Repair_TKA", "CUP_O_Ural_Refuel_TKA", "CUP_O_Ural_Reammo_TKA", "CUP_O_Ural_ZU23_TKA"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2","LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_gmg_F","B_APC_Tracked_01_rcws_F", "B_MBT_01_cannon_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Tracked_01_AA_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
 #endif
 #ifdef __CUP_SARA__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["CUP_O_BTR60_SLA","CUP_O_BRDM2_SLA", "CUP_O_BRDM2_ATGM_SLA", "CUP_O_Ural_Repair_SLA", "CUP_O_Ural_Refuel_SLA", "CUP_O_Ural_Reammo_SLA", "CUP_O_BTR60_SLA"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2", "LOP_ISTS_OPF_BTR60", "LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_gmg_F","B_APC_Tracked_01_rcws_F", "B_MBT_01_cannon_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Tracked_01_AA_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
@@ -144,21 +144,21 @@ if (call d_fnc_checkSHC) then {
 #endif
 #ifdef __TANOA__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["O_T_MRAP_02_hmg_ghex_F","O_T_APC_Wheeled_02_rcws_ghex_F", "O_T_MRAP_02_gmg_ghex_F", "O_T_Truck_03_covered_ghex_F", "O_T_Truck_03_fuel_ghex_F", "O_T_Truck_03_ammo_ghex_F", "O_T_APC_Wheeled_02_rcws_ghex_F"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2", "LOP_ISTS_OPF_BTR60", "LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_gmg_F","B_APC_Tracked_01_rcws_F", "B_MBT_01_cannon_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Tracked_01_AA_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
 #endif
 #ifdef __STRATIS__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["O_MRAP_02_hmg_F","O_APC_Wheeled_02_rcws_F", "O_MRAP_02_gmg_F", "O_Truck_03_repair_F", "O_Truck_03_fuel_F", "O_Truck_03_ammo_F", "O_APC_Wheeled_02_rcws_F"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2", "LOP_ISTS_OPF_BTR60", "LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_hmg_F","B_APC_Wheeled_01_cannon_F", "B_MRAP_01_gmg_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Wheeled_01_cannon_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
 #endif
 #ifdef __MALDEN__
 	d_sm_convoy_vehicles = switch (d_enemy_side_short) do {
-		case "E": {["O_MRAP_02_hmg_F","O_APC_Wheeled_02_rcws_F", "O_MRAP_02_gmg_F", "O_Truck_03_repair_F", "O_Truck_03_fuel_F", "O_Truck_03_ammo_F", "O_APC_Wheeled_02_rcws_F"]};
+		case "E": {["LOP_ISTS_OPF_T34","LOP_ISTS_OPF_T55","LOP_ISTS_OPF_T72BA","LOP_ISTS_OPF_BMP1","LOP_ISTS_OPF_BMP2", "LOP_ISTS_OPF_BTR60", "LOP_ISTS_OPF_ZSU234","rhs_gaz66_zu23_vmf","RHS_Ural_Zu23_MSV_01"]};
 		case "W": {["B_MRAP_01_hmg_F","B_APC_Wheeled_01_cannon_F", "B_MRAP_01_gmg_F", "B_Truck_01_Repair_F", "B_Truck_01_fuel_F", "B_Truck_01_ammo_F", "B_APC_Wheeled_01_cannon_F"]};
 		case "G": {["I_MRAP_03_gmg_F","I_APC_tracked_03_cannon_F", "I_MBT_03_cannon_F", "I_Truck_02_box_F", "I_Truck_02_fuel_F", "I_Truck_02_ammo_F", "I_APC_tracked_03_cannon_F"]};
 	};
