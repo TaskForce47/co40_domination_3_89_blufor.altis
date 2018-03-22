@@ -28,12 +28,12 @@ if (d_IS_HC_CLIENT) then {
 };
 
 #ifndef __TT__
-if (d_WithRecapture == 0 && {d_MissionType != 2}) then {execFSM "fsms\fn_Recapture.fsm"};
+if (true) then {execFSM "fsms\fn_Recapture.fsm"};
 #endif
 
 // start air AI after some time
 #ifndef __TT__
-if (d_MissionType != 2) then {
+if (true) then {
 	0 spawn {
 		scriptName "spawn_x_shcinit_airai";
 		__TRACE("spawn_x_shcinit_airai start")
