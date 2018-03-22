@@ -1241,7 +1241,7 @@ if (hasInterface) then {
 	d_misc_store = d_HeliHEmpty createVehicleLocal [0,0,0];
 	d_mhqvec_create_cooldown_time = -1;
 
-	d_virtual_entities = ["d_virt_man_1", "d_virt_man_2", "d_virt_man_3", "d_virt_man_4", "d_virt_man_5"];
+	d_virtual_entities = ["d_virt_man_1", "HC_D_UNIT", "d_virt_man_2", "d_virt_man_3", "d_virt_man_4", "d_virt_man_5"];
 
 	d_last_beam_target = "";
 
