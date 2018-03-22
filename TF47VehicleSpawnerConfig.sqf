@@ -96,7 +96,7 @@ VS_CONFIG_BEGIN
         "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	      "UK3CB_BAF_Coyote_Logistics_L134A1_D_MTP",
         "UK3CB_BAF_Coyote_Logistics_L111A1_D_MTP"
-      ]
+      ],
       0, 25, []
     ],
     [
@@ -281,7 +281,8 @@ VS_CONFIG_BEGIN
     [
       [
         "rhsusf_CH53E_USMC_D",
-        "RHS_CH_47F_10","RHS_CH_47F_light",
+        "RHS_CH_47F_10",
+        "RHS_CH_47F_light",
         "UK3CB_BAF_Merlin_HC3_18_GPMG_MTP",
         "UK3CB_BAF_Merlin_HC3_Cargo_MTP"
       ],
