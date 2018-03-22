@@ -95,7 +95,7 @@ VS_CONFIG_BEGIN
         "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
         "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
 	      "UK3CB_BAF_Coyote_Logistics_L134A1_D_MTP",
-        "UK3CB_BAF_Coyote_Logistics_L111A1_D_MTP",
+        "UK3CB_BAF_Coyote_Logistics_L111A1_D_MTP"
       ]
       0, 25, []
     ],

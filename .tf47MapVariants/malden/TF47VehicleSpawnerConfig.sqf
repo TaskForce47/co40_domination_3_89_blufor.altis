@@ -133,7 +133,7 @@ VS_CONFIG_BEGIN
       "RHS_M2A2_BUSKI_WD",
       "RHS_M2A3_BUSKI_wd",
       "RHS_M2A3_wd",
-      "RHS_M6_wd"
+      "RHS_M6_wd",
 			"UK3CB_BAF_FV432_Mk3_GPMG_Green",
       "UK3CB_BAF_FV432_Mk3_RWS_Green"
     ],
