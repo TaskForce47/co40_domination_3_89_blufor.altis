@@ -86,7 +86,7 @@ switch (_sec_kind) do {
 	};
 	case 2: {
 		__getPos;
-		private _ctype = "Land_Radar_Small_F";
+		private _ctype = "rhs_prv13";
 		private _vec = createVehicle [_ctype, _poss, [], 0, "NONE"];
 		private _svec = sizeOf _ctype;
 		private _isFlat = (getPosATL _vec) isFlatEmpty [_svec / 2, -1, 0.7, _svec, 0, false, _vec]; // 150
@@ -167,7 +167,7 @@ switch (_sec_kind) do {
 	};
 	case 6: {
 		__getPos;
-		private _fact = "Land_dp_transformer_F";
+		private _fact = "rhs_v3";
 		private _vec = createVehicle [_fact, _poss, [], 0, "NONE"];
 		private _svec = sizeOf _fact;
 		private _isFlat = (getPosATL _vec) isFlatEmpty [_svec / 2, -1, 0.7, _svec, 0, false, _vec]; // 150
