@@ -138,7 +138,7 @@ for "_i" from 1 to _nrcamps do {
 	_wf setVariable ["d_STALL", false, true];
 	_wf setVariable ["d_TARGET_MID_POS", _trg_center];
 	_fwfpos = getPosATL _wf;
-	_fwfpos set [2, 4.3];
+	_fwfpos set [2, 2];
 	private _flagPole = createVehicle [d_flag_pole, _fwfpos, [], 0, "NONE"];
 	_flagPole setPos _fwfpos;
 	_wf setVariable ["d_FLAG", _flagPole, true];
