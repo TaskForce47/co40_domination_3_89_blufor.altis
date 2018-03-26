@@ -6,6 +6,7 @@
 // supports also patrols in square areas, including angle
 __TRACE_1("","_this")
 params ["_grp", "_start_pos", "_wp_array", ["_timeout", []], ["_wpstatements", ""], ["_mindist", 2]];
+
 if (_start_pos isEqualType objNull) then {_start_pos = getPosATL _start_pos};
 if (!(_start_pos isEqualType []) || {_start_pos isEqualTo [] || {isNull _grp}}) exitWith {};
 __TRACE_3("","_grp","_start_pos","_wp_array")
@@ -14,6 +15,7 @@ if !(_wp_array isEqualType []) exitWith {};
 _grp setBehaviour "SAFE";
 private _cur_pos = _start_pos;
 private _no_pos_found = false;
+/*
 for "_i" from 0 to (2 + (floor (random 3))) do {
 	private _wp_pos = switch (count _wp_array) do {
 		case 2: {[_wp_array select 0, _wp_array select 1, _mindist] call d_fnc_GetRanPointCircle};
@@ -64,3 +66,5 @@ if (_wpstatements != "") then {
 private _wp = _grp addWaypoint [_start_pos, 0];
 _wp setWaypointType "CYCLE";
 _wp setWaypointCompletionRadius (10 + random 10);
+*/
+[_grp, _cur_pos, 200, 1, 0.17, 0.66] call CBA_fnc_taskDefend;
